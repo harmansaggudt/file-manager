@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="file-manager.css">
+</head>
+
+<body>
+    <!-- Particle System -->
+    <div class="particle-container" id="particles"></div>
+
+    <div class="dashboard">
+        <!-- Connect Banner -->
+        <div class="connect-banner morphing-border">
+            <div class="connect-content">
+                <div class="connect-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" />
+                        <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" />
+                        <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="connect-text">
+                    <h3>Connect with us!</h3>
+                    <p>Join us in this dynamic group and grow together</p>
+                </div>
+            </div>
+            <button class="close-btn">×</button>
+        </div>
+
+        <!-- Storage Card -->
+        <div class="card storage-card ultra-glass">
+            <div class="card-header">
+                <h3>Storage</h3>
+                <div class="dropdown">
+                    <span>Month</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="storage-legend">
+                <div class="legend-item">
+                    <span class="legend-dot blue"></span>
+                    <span>Documents</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot purple"></span>
+                    <span>Sound</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot yellow"></span>
+                    <span>Videos</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot green"></span>
+                    <span>Photo</span>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="y-axis">
+                    <span>100GB</span>
+                    <span>50GB</span>
+                    <span>40GB</span>
+                    <span>30GB</span>
+                    <span>20GB</span>
+                    <span>10GB</span>
+                    <span>0GB</span>
+                </div>
+                <div class="chart">
+                    <div class="chart-month">
+                        <div class="bars">
+                            <div class="bar blue" style="height: 30%"></div>
+                            <div class="bar purple" style="height: 20%"></div>
+                            <div class="bar yellow" style="height: 40%"></div>
+                            <div class="bar green" style="height: 15%"></div>
+                        </div>
+                        <span class="month-label">Jan</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="bars">
+                            <div class="bar blue" style="height: 25%"></div>
+                            <div class="bar purple" style="height: 35%"></div>
+                            <div class="bar yellow" style="height: 60%"></div>
+                            <div class="bar green" style="height: 80%"></div>
+                        </div>
+                        <span class="month-label">Feb</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="bars">
+                            <div class="bar blue" style="height: 45%"></div>
+                            <div class="bar purple" style="height: 25%"></div>
+                            <div class="bar yellow" style="height: 35%"></div>
+                            <div class="bar green" style="height: 50%"></div>
+                        </div>
+                        <span class="month-label">Mar</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="bars">
+                            <div class="bar blue" style="height: 35%"></div>
+                            <div class="bar purple" style="height: 45%"></div>
+                            <div class="bar yellow" style="height: 55%"></div>
+                            <div class="bar green" style="height: 40%"></div>
+                        </div>
+                        <span class="month-label">Apr</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="bars">
+                            <div class="bar blue" style="height: 50%"></div>
+                            <div class="bar purple" style="height: 30%"></div>
+                            <div class="bar yellow" style="height: 45%"></div>
+                            <div class="bar green" style="height: 65%"></div>
+                        </div>
+                        <span class="month-label">May</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upload Area -->
+        <div class="card upload-card liquid-effect">
+            <div class="upload-tabs">
+                <button class="tab-btn active">Upload</button>
+                <button class="tab-btn">Download</button>
+            </div>
+
+            <div class="upload-area">
+                <div class="upload-icon">
+                    <div class="file-tag">final_design.fig</div>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" />
+                        <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" />
+                        <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
+                <p class="upload-text">Drag & drop or click to choose files</p>
+            </div>
+
+            <div class="upload-info">
+                <span class="supported-formats">Supported formats: XLS, XLSX</span>
+                <span class="max-size">Max: 25MB</span>
+            </div>
+
+            <div class="file-list">
+                <div class="file-item uploading">
+                    <div class="file-icon figma">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                        </svg>
+                    </div>
+                    <div class="file-details">
+                        <span class="file-name">file_format.fig</span>
+                        <span class="file-size">16 MB</span>
+                    </div>
+                    <div class="file-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 74%"></div>
+                        </div>
+                        <span class="progress-text">74%</span>
+                    </div>
+                    <button class="close-btn">×</button>
+                </div>
+
+                <div class="file-item completed">
+                    <div class="file-icon excel">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                        </svg>
+                    </div>
+                    <div class="file-details">
+                        <span class="file-name">data.xls</span>
+                        <span class="file-size">16 MB</span>
+                    </div>
+                    <div class="file-actions">
+                        <button class="action-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 12h18m-9-9l9 9-9 9" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </button>
+                        <button class="action-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Assistant Card -->
+        <div class="card ai-card">
+            <div class="ai-content">
+                <div class="ai-text">
+                    <h3 class="holographic">How AI assist your file?</h3>
+                    <button class="learn-btn">Learn More</button>
+                </div>
+                <div class="ai-illustration">
+                    <div class="ai-sphere">
+                        <div class="sphere-inner"></div>
+                        <div class="sphere-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Storage Usage -->
+        <div class="card usage-card">
+            <div class="usage-display">
+                <div class="usage-number neon-glow">23,65%</div>
+                <div class="usage-label">Ready to delete</div>
+                <div class="usage-subtitle">Up to 46 GB</div>
+            </div>
+            <button class="delete-btn">Delete</button>
+        </div>
+
+        <!-- Phone Mockup -->
+        <div class="phone-mockup">
+            <div class="phone-frame">
+                <div class="phone-header">
+                    <div class="phone-notch"></div>
+                    <div class="phone-status">
+                        <span class="time">9:41</span>
+                        <div class="status-icons">
+                            <div class="signal"></div>
+                            <div class="wifi"></div>
+                            <div class="battery"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-content">
+                    <div class="app-header">
+                        <div class="menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <h2>Photos</h2>
+                    </div>
+                    <div class="file-info">
+                        <div class="file-icon-large">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                            </svg>
+                        </div>
+                        <div class="file-details">
+                            <h3>Videos</h3>
+                            <span class="file-count">234 file</span>
+                        </div>
+                    </div>
+                    <div class="modification-info">
+                        <span>Last Modified: 16 Sep</span>
+                        <span>Last Modified: 09 Feb</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shared Files Card -->
+        <div class="card shared-card">
+            <div class="card-header">
+                <h3>Shared File</h3>
+                <button class="see-all">See All</button>
+            </div>
+
+            <div class="shared-list">
+                <div class="shared-item">
+                    <div class="user-avatar simon">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ff6b6b'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-family='Arial' font-size='12' font-weight='bold'%3ESH%3C/text%3E%3C/svg%3E"
+                            alt="Simon Hempe">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Simon Hempe</span>
+                        <span class="user-email">no.simon@gmail.com</span>
+                    </div>
+                    <button class="share-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="shared-item">
+                    <div class="user-avatar alberta">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%234ecdc4'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-family='Arial' font-size='12' font-weight='bold'%3EAK%3C/text%3E%3C/svg%3E"
+                            alt="Alberta Kimber">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Alberta Kimber</span>
+                        <span class="user-email">realalberta@gmail.com</span>
+                    </div>
+                    <button class="share-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="shared-item">
+                    <div class="user-avatar sight">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ffa726'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-family='Arial' font-size='12' font-weight='bold'%3ESN%3C/text%3E%3C/svg%3E"
+                            alt="Sight Nurochman">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Sight Nurochman</span>
+                        <span class="user-email">nurochman3@gmail.com</span>
+                    </div>
+                    <button class="share-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="share-link">
+                <span class="link-text">octama.io/landing-page</span>
+                <button class="copy-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" />
+                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor"
+                            stroke-width="2" />
+                    </svg>
+                    Copy
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactive functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mouse tracking for cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                    card.style.setProperty('--mouse-x', x + '%');
+                    card.style.setProperty('--mouse-y', y + '%');
+
+                    // 3D tilt effect
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const mouseX = e.clientX - rect.left;
+                    const mouseY = e.clientY - rect.top;
+
+                    const rotateX = (mouseY - centerY) / 15;
+                    const rotateY = (centerX - mouseX) / 15;
+
+                    card.style.transform = `translateY(-12px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                    card.style.removeProperty('--mouse-x');
+                    card.style.removeProperty('--mouse-y');
+                });
+            });
+
+            // Parallax effect for background elements
+            document.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+
+                document.body.style.setProperty('--mouse-x', mouseX);
+                document.body.style.setProperty('--mouse-y', mouseY);
+            });
+
+            // Magnetic effect for buttons
+            document.querySelectorAll('button, .tab-btn').forEach(btn => {
+                btn.addEventListener('mousemove', (e) => {
+                    const rect = btn.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+
+                    btn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
+                });
+
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.transform = '';
+                });
+            });
+            // Close banner
+            document.querySelector('.connect-banner .close-btn').addEventListener('click', function () {
+                document.querySelector('.connect-banner').style.display = 'none';
+            });
+
+            // Tab switching
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Animate progress bars
+            setTimeout(() => {
+                document.querySelectorAll('.bar').forEach((bar, index) => {
+                    bar.style.animationDelay = `${index * 0.1}s`;
+                    bar.classList.add('animate');
+                });
+            }, 500);
+
+            // Animate file upload progress
+            const progressFill = document.querySelector('.progress-fill');
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 1;
+                progressFill.style.width = `${progress}%`;
+                document.querySelector('.progress-text').textContent = `${progress}%`;
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        document.querySelector('.file-item.uploading').classList.add('completed');
+                    }, 500);
+                }
+            }, 50);
+
+            // Particle system
+            function createParticle() {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 10 + 5) + 's';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                document.getElementById('particles').appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 15000);
+            }
+
+            // Create particles periodically
+            setInterval(createParticle, 500);
+
+            // Create initial particles
+            for (let i = 0; i < 20; i++) {
+                setTimeout(createParticle, i * 100);
+            }
+
+            // Advanced cursor trail effect
+            const trail = [];
+            const trailLength = 20;
+
+            document.addEventListener('mousemove', (e) => {
+                trail.push({ x: e.clientX, y: e.clientY, time: Date.now() });
+
+                if (trail.length > trailLength) {
+                    trail.shift();
+                }
+
+                // Update existing trail elements or create new ones
+                trail.forEach((point, index) => {
+                    let trailElement = document.getElementById(`trail-${index}`);
+                    if (!trailElement) {
+                        trailElement = document.createElement('div');
+                        trailElement.id = `trail-${index}`;
+                        trailElement.style.position = 'fixed';
+                        trailElement.style.pointerEvents = 'none';
+                        trailElement.style.zIndex = '9999';
+                        trailElement.style.width = '4px';
+                        trailElement.style.height = '4px';
+                        trailElement.style.borderRadius = '50%';
+                        trailElement.style.transition = 'all 0.1s ease';
+                        document.body.appendChild(trailElement);
+                    }
+
+                    const opacity = (index / trailLength) * 0.5;
+                    const size = (index / trailLength) * 8 + 2;
+
+                    trailElement.style.left = point.x - size / 2 + 'px';
+                    trailElement.style.top = point.y - size / 2 + 'px';
+                    trailElement.style.width = size + 'px';
+                    trailElement.style.height = size + 'px';
+                    trailElement.style.background = `radial-gradient(circle, rgba(59, 130, 246, ${opacity}), transparent)`;
+                });
+            });
+
+            // Copy link functionality
+            document.querySelector('.copy-btn').addEventListener('click', function () {
+                navigator.clipboard.writeText('octama.io/landing-page');
+                this.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"/></svg> Copied!';
+                setTimeout(() => {
+                    this.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="2"/></svg> Copy';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
